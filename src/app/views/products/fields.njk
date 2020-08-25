@@ -25,9 +25,7 @@
 <div class="item">
     <div>Description</div>
     <div>
-        <textarea name="description">
-            {{product.description}}
-        </textarea>
+        <textarea name="description">{{product.description}}</textarea>
     </div>
 </div>
 
@@ -39,6 +37,7 @@
             name="price"
             placeholder="R$ "
             value="{{product.price}}"
+            onkeydown="Mask.apply(this, 'formatBRL')"
         >
     </div>
     {%if product.old_price %}
