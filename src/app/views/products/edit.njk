@@ -17,12 +17,12 @@
                 >
         </div>
 
-        <button class="button" type="submit">Update</button>
+        <button class="button edit" type="submit">Update</button>
     </form>
 
     <form id="form-delete" action="/products?_method=DELETE" method="post">
         <input type="hidden" name="id" value={{product.id}}>
-        <button class="button" type="submit">DELETE!</button>
+        <button class="button delete" type="submit">DELETE!</button>
     </form>
 <script src="../public/scripts.js"></script>
 </section>
