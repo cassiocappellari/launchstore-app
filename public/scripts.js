@@ -1,3 +1,14 @@
+const formDelete = document.querySelector('#form-delete')
+
+if(formDelete) {
+    formDelete.addEventListener('submit', function(event){
+        const deleteOption = confirm('Are you sure?')
+        if(!deleteOption) {
+            event.preventDefault()
+        }
+    })
+}
+
 const Mask = {
     apply(input, func) {
         setTimeout(function() {
