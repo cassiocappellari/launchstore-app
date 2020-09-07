@@ -45,7 +45,15 @@ module.exports = {
         results = await Category.all()
         const categories = results.rows
 
-        return res.render('products/edit', {product, categories})
+        results = await Product.files(product.id)
+        let files = results.rows
+        files = files.map(file => ({
+            ...file,
+            src: `${req.protocol}://${req.headers.host}${file.path.replace("public", "")}`
+        }))
+
+
+        return res.render('products/edit', {product, categories, files})
     },
     async put(req, res) {
         const keys = Object.keys(req.body)
