@@ -299,3 +299,35 @@ form .item #photos-preview img {
 #photos-preview .photo:hover i {
     opacity: 1;
 }
+
+/* PRODUCT VIEW */
+
+.product-single {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 24px;
+
+    padding: 32px 24px;
+    margin: 32px auto;
+
+    box-shadow: 2px 2px 2px 0px rgba(63, 63, 63, .5);
+
+    border: 1px solid #efefef;
+    border-radius: 4px;
+}
+
+.product-single .gallery {
+    width: 100%;
+}
+
+.product-single .gallery img {
+    width: 100%;
+}
+
+/* PRODUCT SINGLE INFO */
+
+.product-single .info {
+    display: grid;
+    grid-template-rows: auto 40px 2fr 1fr;
+}
